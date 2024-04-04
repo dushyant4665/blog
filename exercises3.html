@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>CRISP</title>
+
+    <style>
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+#wrapper {
+    max-width: 100%;
+}
+
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  margin: 20px;
+}
+
+header {
+  padding: 0 20px;
+  background-color: #151815;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0px;
+  position: sticky;
+  z-index: 1;
+  transition:background-color 0.4s ease-in-out ;
+}
+
+#brand  {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand1, #brand a {
+  color: #1b360a;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: rgb(195, 195, 195);
+  margin-bottom: 40px;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+#brand, #mobile-menu ul li a:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity:0 ;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color:  #000000
+ 
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  height: calc(30vh - 32px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-top: 10px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+      
+.blog-article {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.blog-article img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    margin: 0px 12px 30px 12px;
+    position: relative;
+    width: 300px;
+    float: right
+}
+
+@media (max-width:767px){
+  .blog-article img{
+    margin: 20px 0px 36px 20px;
+
+  }
+}
+
+.blog-content {
+    flex: 1;
+}
+
+.blog-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(255, 238, 0);
+}
+
+.blog-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color:white;
+    margin-bottom: 10px;
+   
+}
+
+.blog-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-content a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .blog-article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog-article img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    header{
+      width: 100%;
+    }
+}
+
+
+
+
+footer{
+  background: #111;
+  height: auto;
+  width:99vw ;
+  font-family:"open-sans";
+  padding-top: 12px;
+  color: #fff;
+
+}
+
+.footer_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  text-align: center;
+}
+
+
+.footer_content h3{
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1rem;
+  color: #1a3708;
+
+}
+
+.footer_content .mail_link{
+  max-width: 500px;
+  margin: 100px 60px 20px 60px;
+  line-height:28px;
+  font-size: 16px ;
+}
+
+
+.socials{
+list-style: none;
+display: flex;
+align-items:center;
+justify-content: center;
+margin: 5px 0 10px 0;
+
+}
+
+
+.social li{
+  margin: 0 10px;
+
+}
+
+.social a{
+  text-decoration: none;
+  color: white;
+}
+
+.social a i{
+  font-size:1.1rem;
+  transition: color .4s ease;
+}
+
+i:hover {
+  color:rgb(206, 220, 82);
+}
+
+.mail_link:hover{
+  color: rgb(105, 114, 21);
+  transition: color .4s ease;
+}
+
+.website__rights{
+  background: rgb(0, 0, 0);
+  width: 98vw;
+  padding: 20px 0;
+  text-align: center;
+
+}
+
+.website__rights p{
+  font-size:10px ;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.text-sm {
+color: #bfbfbf;
+padding:10px 2px auto 8px;
+margin: 22px 2px 0px 160px;
+position: relative;
+bottom: 0px;
+}
+
+
+
+
+
+#importance-of-exercises-sec{
+  color: #fff;
+  margin: ;
+}
+
+#myh1{
+  font-size: 40px;
+  text-align: center;
+
+}
+
+#myh1paragraph{
+margin: 10px 20px 10px 20px;
+text-align: center;
+font-size: 25px;
+color: #666666;
+}
+
+.mail_link{
+  margin-left:30px ;
+  font-family: "Poppins", sans-serif;
+  
+}
+.mail_link:hover{
+  color:rgb(112, 116, 8);
+}
+
+.mail_link:hover{
+  color: ;
+}
+
+
+
+
+    </style>
+</head>
+
+
+<body>
+  <header>
+    <div id="brand"><a href="/">CRISP</a></div>
+    <nav>
+      <ul>
+        <li><a href="/home">About</a></li>
+        <li><a href="/products">More</a></li>
+        <li><a href="form.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="/home">About</a></li>
+        <li><a href="/products">More</a></li>
+        <li><a href="form.html">Contact</a></li>
+      </ul>
+    </div>
+     </header> 
+     <section id="importance-of-exercises-sec">
+      <h1 id="myh1">Importance of doing exercises</h1>
+      
+      <p id="myh1paragraph">Doing exercises helps in straight posture
+        doing any kind of physical activity helps in blood circulation.
+      </p>
+    
+    </section> 
+    <section class="blog-article">
+       
+        <div class="blog-content">
+            <h2>1.Reduce anxiety and depression</h2>
+            <img class="img1" src="assets/images/davidgoggins.jpg" alt="">
+            <p>  Studies show that exercise can treat mild to moderate depression as effectively as antidepressant medication—but without the side-effects, of course Your muscles need time to heal. Every time you exercise, your muscle tissue is experiencing tiny little tears. It’s a crucial part of getting stronger and bulking up.. <br> As one example, a recent study done by the Harvard T.H. Chan School of Public Health found that running for 15 minutes a day or walking for an hour reduces the risk of major depression by 26%. In addition to relieving depression symptoms, research also shows that maintaining an exercise schedule can prevent you from relapsing.
+            <br><br>
+            The results indicated that stress caused a smaller decline in positive mood among regular exercisers. The sedentary individuals experienced a larger decline in mood. This suggests that regular exercise may increase resilience, helping people cope with difficult situations.
+            <br><br>
+            However, it is important to note that the study did not show a direct causal link between stress levels and exercise. Other factors are likely at play — for example, a person with a chronic health condition that forces them to be sedentary may have higher stress levels overall.
+            <br><br>
+            Despite this, lower stress levels may mean a person is less likely to experience certain health problems. Older research from 2013 notes that 75–90% of visits to a primary care doctor are for stress-related conditions, such as:
+            <br><br>
+            <a class="link" href="https://my.clevelandclinic.org/health/diseases/21493-cardiovascular-disease">1.cardiovascular disease</a>   <br>
+            <a class="link" href="https://www.mayoclinic.org/diseases-conditions/obesity/symptoms-causes/syc-20375742"> 2.obesity </a>  <br>
+            <a class="link" href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444">3.diabetes</a>   <br>
+            <a class="link" href="https://www.sleepfoundation.org/sleep-disorders">4.sleep problems</a>   <br>   <br>
+
+<br><br>
+            Increases oxygen supply to the brain
+As your heart starts to pump faster during exercise, it increases the oxygen supply to your brain.
+
+This results in certain changes to the blood vessels of your brain, promoting potential improvements in executive function, which includes working memory, flexible thinking, and self-control.
+
+<br><br>
+
+those who exercise may be able to better deal with common stressors, and this could improve their overall quality of life.
+          </p>
+            <a href="https://www.healthline.com/health/depression/exercise">Read more</a>
+        </div>
+    </section>
+    <section class="blog-article">
+       
+      <div class="blog-content">
+          <h2>2.Better physcial Health may mean better mental health</h2>
+          <img class="img2" src="assets/images/chad.meditating.jpg" alt="">
+          <p> While stress can cause illness, illness can also cause stress. Improving your overall health and longevity with exercise can save you a great deal of stress in the short run (by strengthening your immunity to colds, the flu, and other minor illnesses) and the long run (by helping you stay healthier longer, and enjoy life more because of it).
+<br> <br>
+            Exercise distracts us from negative thought patterns like worrying and overthinking, which cuts down our stress. 
+            With regular exercise, we witness the growth of our strength and stamina. This boosts our goal-achievement confidence, which spills over to other areas of our life. 
+
+            <br> <br>
+            Exercise offers short-term boosts in cognition. Studies show that immediately after a bout of physical activity, people perform better on tests of working memory and other executive functions. This may be in part because movement increases the release of neurotransmitters in the brain, most notably epinephrine and norepinephrine.
+            <br><br>
+            “These kinds of molecules are needed for paying attention to information,” said Marc Roig, an associate professor in the School of Physical and Occupational Therapy at McGill University. Attention is essential for working memory and executive functioning, he added.
+            <br><br>
+The neurotransmitters dopamine and serotonin are also released with exercise, which is thought to be a main reason people often feel so good after going for a run or a long bike ride.
+                </p>
+          <a href="https://www.nytimes.com/2024/04/02/well/mind/exercise-mental-health-cognition.html">Read more</a>
+      </div>
+  </section>
+    <section class="blog-article">
+       
+    <div class="blog-content">
+        <h2>3.Exercises promotes confidence</h2>
+        <img class="img3" src="assets/images/chad.jpg" alt="">
+        <p> Doing consistently workout indoor or outdoor boost confidence and self-esteem.
+          Exercise can help you lose weight, straighten your body, and maintain a healthy glow and a smile. You may feel a subtle but significant boost in your mood as your clothes look more flattering and you project an aura of increased strength.
+
+          Exercising makes us feel more in control of our bodies and the capabilities of our bodies. In turn, this makes us feel better in control over our circumstances. <br><br>
+          Ever experienced that post-workout high? There’s a scientific explanation for that amazing feeling. Exercise isn’t just about getting in shape; it’s also a potent confidence booster. When you work out, your brain releases natural mood-lifters called endorphins, turning down stress and elevating your spirits. Simultaneously, conquering physical challenges through exercise fosters self-assurance and belief in yourself. 
+            
+          
+            </p>
+        <a href="https://www.psychreg.org/exercise-role-boosting-self-esteem-confidence/">Read more</a>
+    </div>
+</section>
+
+<section class="blog-article">
+       
+  <div class="blog-content">
+      <h2>4.Makes body free and flexible</h2>
+      <img class="img4" src="assets/images/flex1.png" alt="">
+      <p> Stretching your body to become more supple and flexible offers many physical benefits. Such training allows for easier and deeper movements while building strength and stability. Stretching your muscles and joints also leads to greater range of motion, improved balance, and increased flexibility and strength.
+        <br>
+
+        Exercising makes us feel more in control of our bodies and the capabilities of our bodies. In turn, this makes us feel better in control over our circumstances. 
+        <br>
+          
+
+            
+</p>
+      <a href="blog-post.html">Read more</a>
+  </div>
+</section>
+
+
+<section class="blog-article">       
+  <div class="blog-content">
+      <h2>6.Makes you more dominant</h2>
+      <img class="img6" src="assets/images/dominant.jpg" alt="">
+<p> 
+   Brain Health: Exercise stimulates the release of brain-derived neurotrophic factor (BDNF), a protein that supports brain health. BDNF promotes neural growth, cognitive function, and resilience against stress1.
+<br><br>
+Memory Enhancement: Aerobic exercise boosts the hippocampus, a brain region crucial for learning and memory. Improved cardiovascular fitness positively impacts memory2.
+<br><br>
+Concentration and Focus: Exercise improves attention spans and executive control. Interspersing physical activity with mental tasks enhances concentration and the ability to ignore distractions2.
+<br><br>
+Emotional Well-Being: Exercise releases endorphins, dopamine, and serotonin—natural mood enhancers. Reduced depression, anger, and stress contribute to mental strength3.<br><br>
+Self-Esteem: Feeling physically fit can boost self-esteem, a vital component of mental dominance3.
+            
+</p>
+      <a href="blog-post.html">Read more</a>
+  </div>
+</section>
+<section class="blog-article">
+<div class="blog-content" >
+  <h2>7.Exercises Increase Your Athleticism</h2>
+
+  
+  <p> 
+    <span style="font-size: 20px; color: rgb(140, 54, 137);">The Mobility Game</span>
+     We have to make sure your joints are both stable and mobile before you become a speeding bullet.
+
+    If you’re tight and locked up your muscles will be restricted, so they won’t work to the best of their ability. It’s like driving with the emergency brake on.
+    Start every workout with a good warm-up. These exercises can also be included in rest periods and in your downtime, which is known as ‘fillers’.   
+    Do enough to get yourself in the proper positions to safely perform the exercise.  
+    If you have a super tight back and hips from sitting at work all day, you’re going to need a bit more to get into good positions. 
+    You don’t need to become yogi here. Don’t lose sight of what your actual goal is — to become more athletic. 
+    Your warm-up will be dependent on your restrictions and what you are going to be training. 
+    ‘How to move like a ninja’ is a great example. This is known as a flow. It is a combination of a few simple exercises that help un-lock super tight areas on most people. </p>   
+
+  
+    <img class="img7" src="assets/images/flex1.png" alt="">
+  
+
+    
+
+   <p><span style="font-size: 20px; color: rgb(140, 54, 137);"> Up Your Strength </span> The next piece of the puzzle is using your newly found range of motion and build a solid base of strength. This means compound exercises with heavy weights that are going to challenge you and make sure your form is perfect.
+    
+    Before you go swinging weights around and dive-bombing into the bottom of a squat keep reading.
+    
+    A good strength base is like a solid foundation of a house. It might look good on the outside but without it, you aren’t going to last long.
+    
+    Think of your strength as a glass. Inside that glass, we have water which represents your athleticism. As a general rule the greater base of strength, the greater potential to increase your athleticism.
+    
+    Bigger glass = greater potential for more water.
+    
+    There comes a point where you can be close to your strength potential and will see better gains by improving other characteristics like power production, reaction time, etc.</p>
+
+
+    
+
+    <p><span style="font-size: 20px; color: rgb(140, 54, 137);"> Train Your Brain </span> You may have heard the phrase, “The mind is the body’s most powerful muscle.” While the brain technically isn’t a muscle, that powerful saying has a lot of truth to it.
+
+      In fact, training your brain is one of the most effective ways to improve your athletic performance and gain an advantage over the competition.
+      
+      Here’s why: <br><br>
+      
+      Sports and athletic endeavors aren’t just about well your muscles perform. Most sports rely heavily on your mental abilities as well. For example, football, soccer, and hockey players have to make thousands of split-second decisions, and any one of them can drastically impact the outcome of the game.
+      
+      This means if you want to improve your athletic performance, you need to train your brain as well! Many of these devices take advantage of visual stimulants. Performing mental exercises involves responding to the stimulant as quickly and accurately as possible.
+      
+      There are many sports vision training tools available that can improve your athletic performance, but Reflexion offers a proven and convenient array of exercises that are on the cutting-edge. When you combine it with the ability to track your progress, you have a very powerful tool at your disposal.
+      
+      While it may not seem like you’re doing much at first, it won’t take long for you to see the benefits. Cognitive performance exercises are being done by professional athletes all over the world to help improve response times, visual accuracy, memory, and so much more.</p>
+
+
+    
+
+      <p>  <span style="font-size: 20px; color: rgb(140, 54, 137);"> Make Proper Hydration a Priority</span> As you’re exercising, your muscles are producing heat. This increases your core body temperature by quite a bit. Sweating is just your body’s attempt at cooling you down.
+        <br>
+        During a particularly intense exercise routine, your body could lose up to 45 ounces of water an hour. It’s important that you keep some water within reach.
+
+Dehydration can happen very quickly. You can start to lose consciousness in the middle of a hard rep and injure yourself. Or, you can experience heatstroke if you’re outside.
+      </p>
+      <a href="blog-post.html">Read more</a>
+    </div>
+  </section>
+
+
+
+    <footer class="footer__sec">
+      
+      <div class="footer_content" >
+          
+          <h3 id="brand1">CRISP</h3>
+        <p><a class="mail_link" href="https://mail.google.com/mail/u/0/?fs=1&to=dushyantkhandelwal4665@gmail.com&tf=cm">@Dushyantkhandelwal4665@gmail.com</a></p>  
+          <Ul class="socials">
+           <li><a href="/"><i class="fa fa-facebook"></i></a></li>
+           <li><a href="https://twitter.com/dushyant4665"><i class="fa fa-twitter"></i></a></li>
+           <li><a href="https://www.instagram.com/dushyant.fr/"><i class="fa fa-instagram"></i></a></li>
+           <li><a href="/"><i class="fa fa-youtube"></i></a></li>
+           <li><a href="https://www.linkedin.com/in/dushyant-khandelwal-516319221/"><i class="fa fa-linkedin"></i></a></li>
+           <li><a href="https://github.com/dushyant4665/"><i class="fa fa-github"></i></a></li>
+          </Ul>
+      </div>
+
+<div> <p  class="website__rights">© CRISP 2024. All rights reserved</p></div>
+</footer>
+
+ <script>
+    function toggleMobileMenu(menu) {
+     menu.classList.toggle('open');
+ }
+ </script>
+</body>
+</html>

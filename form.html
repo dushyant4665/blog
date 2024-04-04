@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>form</title>
+  <style>
+  *{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+
+  }
+
+  body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(#252222,#000000);
+    
+  }
+  #contact-container{
+display: flex;
+height: 100vh;
+align-items: center;
+justify-content: space-evenly;
+
+  }
+
+  .contact-left{
+    display: flex;
+    flex-direction:column ;
+    align-items:start;
+    gap: 30px;
+  }
+
+  .contact-left-title h2{
+    font-weight: 600;
+    color: #ffffff;
+    font-size:50px ;
+    margin-bottom: 5px;
+
+  }
+
+  .contact-left-title hr{
+    border: none;
+    width: 120px;
+    border-radius: 5px;
+    height: 8px;
+    background-color:#929292;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline:none;
+    padding-left: 25px;
+    font-weight:600px;
+    color: #666;
+    border-radius:50px;
+  }
+
+  .contact-inputs:focus{
+    border: 1px solid #a1a1a1;
+  }
+  .contact-input::placeholder{
+    color: #a9a9a9;
+   
+  }
+
+
+  .contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius:50px ;
+    background: linear-gradient(270deg, #231a13, #fa6d86);
+    cursor: pointer;
+  }
+
+  .contact-left button:hover{
+    background-color:#002ead;
+      transition: 0.7s;
+  }
+  .contact-left button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+}
+
+  .contact-left button img{
+    height: 15px;
+
+  }
+  .contact-right img{
+    width:500px;
+  }
+
+  @media (max-width:800px){
+    .contact-inputs{
+      width:80vw;
+    }
+    .contact-right{
+      display: none;
+    }
+
+  }
+
+  .socials{
+list-style: none;
+display: flex;
+flex-direction:row ;
+align-items:center;
+justify-content: center;
+gap: 20px;
+margin: 50px 50px 50px 50px;
+align-items: center;
+
+}
+
+.socials li{
+  margin:  10px;
+  size: 20px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: rgb(0, 34, 255);
+}
+
+.social a i{
+  font-size:1.1rem;
+  transition: color .4s ease;
+  
+}
+
+i:hover {
+  color:rgb(206, 220, 82);
+}
+
+.mail_link{
+position: relative;
+left: 620px;
+bottom: 36px;
+
+}
+
+@media (max-width:800px){
+  .mail_link{
+    position: relative;
+    left: 38px;
+    bottom: 40px;
+  }
+  #contact-container{
+    margin: 25px;
+  }
+}
+
+.mail_link:hover{
+  color: rgb(105, 114, 21);
+  transition: color .4s ease;
+}
+
+.social-media{
+  display: flex;
+  flex-direction: column;
+ 
+}
+  </style>
+</head>
+<body>
+      <div id="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+              <h2>Message (सन्देश)</h2>
+              <hr>
+            </div>
+            <input type="hidden" name="access_key" value="f1b1f706-9bea-46ea-b13c-bd861ff56d29">
+            <input type="text" name="Your name" placeholder="Your name" class="contact-inputs" required> </input>
+            <input type="text" name="YOURname" placeholder="Your Email" class="contact-inputs" required> </input>
+            <textarea style="height: 200px; border-radius: 30px;" name="Message" placeholder="Your Message" class="contact-inputs" required></textarea>
+
+            <button type="">Submit <img src="assets/images/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+          <img  style="width: 300px;" src="assets/images/feedback.png" alt="">
+        </div>
+      </div>
+
+<div class="social-media">
+  <h2 style="color: #fa6d86; text-align: center;">Socials</h2>
+  <Ul class="socials">
+    <li><a href="/"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/dushyant4665"><i class="fa fa-twitter"></i> </a></li>
+    <li><a href="https://www.instagram.com/dushyant.fr/"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="/"><i class="fa fa-youtube"></i>  </a></li>
+    <li><a href="https://www.linkedin.com/in/dushyant-khandelwal-516319221/"><i class="fa fa-linkedin"></i> </a></li>
+    <li><a href="https://github.com/dushyant4665/"><i class="fa fa-github"></i> </a></li>
+   </Ul>
+   <a class="mail_link" href="https://mail.google.com/mail/u/0/?fs=1&to=dushyantkhandelwal4665@gmail.com&tf=cm">@dushyantkhandelwal4665@gmail.com</a>
+</div>
+     
+</body>
+</html>
