@@ -103,7 +103,7 @@ justify-content: space-evenly;
     width:500px;
   }
 
-  @media (max-width:800px){
+  @media (max-width:767px){
     .contact-inputs{
       width:80vw;
     }
@@ -125,6 +125,11 @@ align-items: center;
 
 }
 
+.socials li:hover{
+  margin:  10px;
+  size: 20px;
+}
+
 .socials li{
   margin:  10px;
   size: 20px;
@@ -132,7 +137,7 @@ align-items: center;
 
 .socials a{
   text-decoration: none;
-  color: rgb(0, 34, 255);
+  color: rgb(255, 255, 255);
 }
 
 .social a i{
@@ -146,16 +151,16 @@ i:hover {
 }
 
 .mail_link{
-position: relative;
-left: 620px;
+/* position: relative;
+left: 620px; */
 bottom: 36px;
 
 }
 
 @media (max-width:800px){
   .mail_link{
-    position: relative;
-    left: 48px;
+    /* position: relative;
+    left: 38px; */
     bottom: 40px;
   }
   #contact-container{
@@ -173,6 +178,50 @@ bottom: 36px;
   flex-direction: column;
  
 }
+.about-sec{
+  color: white;
+  font-family: Roboto,sans-serif;
+}
+.rounded {
+  height: 120px;
+    width: 120px;
+    object-fit: fill;
+    border-radius: 99px;
+}
+.py-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.mb-3{
+    margin-bottom: 30px;
+}
+.post-footer .post-author{
+    position: relative;
+    margin-top: 4em;
+    background-color: var(--light);
+}
+.post-footer .post-author::after{
+    background-color: white;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    z-index: 0;
+}
+.post-footer .post-author .author-avatar{
+    margin: 0 auto;
+    margin-bottom: 1em;
+    position: inherit;
+    z-index: 1;
+}
+.post-footer .post-comments .reply{
+    padding-left: 7em;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -193,18 +242,30 @@ bottom: 36px;
           <img  style="width: 300px;" src="assets/images/feedback.png" alt="">
         </div>
       </div>
+     
+
+      <div>
+        <h1>Qoute</h1>   
+
+        <p>
+          
+        </p>
+
+        
+      </div>
+
+       
 
 <div class="social-media">
   <h2 style="color: #fa6d86; text-align: center;">Socials</h2>
   <Ul class="socials">
     <li><a href="/"><i class="fa fa-facebook"></i></a></li>
-    <li><a href="https://twitter.com/dushyant4665"><i class="fa fa-twitter"></i> </a></li>
-    <li><a href="https://www.instagram.com/dushyant.fr/"><i class="fa fa-instagram"></i></a></li>
-    <li><a href="/"><i class="fa fa-youtube"></i>  </a></li>
-    <li><a href="https://www.linkedin.com/in/dushyant-khandelwal-516319221/"><i class="fa fa-linkedin"></i> </a></li>
-    <li><a href="https://github.com/dushyant4665/"><i class="fa fa-github"></i> </a></li>
-   </Ul>
-   <a class="mail_link" href="https://mail.google.com/mail/u/0/?fs=1&to=dushyantkhandelwal4665@gmail.com&tf=cm">@dushyantkhandelwal4665@gmail.com</a>
+            <li><a href="https://twitter.com/dushyant4665"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/dushyant.fr/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="/"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/dushyant-khandelwal-516319221/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/dushyant4665/"><i class="fa fa-github"></i></a></li>
+           </Ul>
 </div>
      
 </body>
